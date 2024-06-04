@@ -15,7 +15,8 @@ public class WebClientConfig {
     @Bean
     @LoadBalanced
     public WebClient.Builder webClientBuilder() {
-        return WebClient.builder();
+        HttpClient httpClient = HttpClient.create().resolver(DefaultAddressResolverGroup.INSTANCE);
+        return WebClient.builder().clientConnector(new ReactorClientHttpConnector(httpClient));
     }
 
 }
