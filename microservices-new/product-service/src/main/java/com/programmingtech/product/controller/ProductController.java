@@ -3,6 +3,7 @@ package com.programmingtech.product.controller;
 import com.programmingtech.product.dto.ProductRequest;
 import com.programmingtech.product.dto.ProductResponse;
 import com.programmingtech.product.repository.ProductService;
+import io.micrometer.tracing.Tracer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
